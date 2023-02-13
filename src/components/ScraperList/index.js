@@ -4,16 +4,6 @@ import Button from '@mui/material/Button';
 import DownloadIcon from '@mui/icons-material/Download';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import axios from 'axios';
-//import { makeStyles } from '@mui/styles';
-//import DataGrid from '@material-ui/data-grid';
-//import { makeStyles } from '@material-ui/core/styles';
-
-/*const useStyles = makeStyles({
-  root: {
-    width: '100%',
-    height: '100%',
-  },
-}); */
 
 const columns = [
   { field: 'name', headerName: 'Name', width: 200 },
@@ -32,9 +22,7 @@ const columns = [
       Github
     </Button>
 
-)
-
-},
+)},
   { field: 'downloadUrl', 
     headerName: 'Download URL',
     width: 250,
@@ -54,8 +42,7 @@ const columns = [
 ];
 
 const ScraperList = () => {
-  //const classes = useStyles();
-  const [data, setData] = useState([]);
+  const [scrapers, setScrapers] = useState([]);
 
   useEffect(() => {
     axios
@@ -70,7 +57,7 @@ const ScraperList = () => {
             downloadUrl: scraper.download_url,
           };
         });
-        setData(scrapers);
+        setScrapers(scrapers);
       })
       .catch(err => console.error("An error has ocurred " + err));
   }, []);
@@ -91,7 +78,7 @@ const ScraperList = () => {
         }}
         autoPageSize
         autoHeight
-        rows={data}
+        rows={scrapers}
         rowsPerPageOptions={[5, 10, 20]}
         columns={columns}
         pageSize={15}
