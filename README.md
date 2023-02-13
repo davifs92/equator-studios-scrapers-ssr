@@ -2,6 +2,9 @@
 
 This project was created to Equator Studio. This apps gets a list from the official repository from Equator Studios and displays in ReactJS app using DataGrid and other elements.
 
+## Live version:
+You can check the live version here: https://equator-scrapers.netlify.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
