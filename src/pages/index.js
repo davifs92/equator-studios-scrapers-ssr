@@ -1,4 +1,4 @@
-import './App.css';
+import './App.module.css';
 import ResponsiveAppBar from '../components/Header';
 import ScraperList from '../components/ScraperList';
 import Container from '@mui/material/Container';

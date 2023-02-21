@@ -4,13 +4,10 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 
-import logo from './logo.png'
-
 
 function ResponsiveAppBar() {
 
    
- 
   return (
     <AppBar position="static" color="primary" enableColorOnDark>
       <Container maxWidth="xl">
@@ -21,7 +18,7 @@ function ResponsiveAppBar() {
             height: 64,
             }}
             alt="Your logo."
-            src={logo}
+            src="/logo.png"
         />
 
          
